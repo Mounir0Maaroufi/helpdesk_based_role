@@ -1,0 +1,84 @@
+@model HelpDesk.Models.Complaint
+
+@{
+    // Set the title of the page
+    ViewData["Title"] = "Details";
+}
+
+<!-- Display details of the complaint -->
+<h1>Details</h1>
+
+<div>
+    <h4>Complaint</h4>
+    <hr />
+    <dl class="row">
+        <!-- Display the complaint title -->
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        
+        <!-- Display the issuer email -->
+        <dt class = "col-sm-2">
+            Issuer
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.User.Email)
+        </dd>
+        
+        <!-- Display the complaint description -->
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        
+        <!-- Display the complaint status -->
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+        
+        <!-- Display the action taken for the complaint -->
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Action)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Action)
+        </dd>
+        
+        <!-- Display the date when the complaint was created -->
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CreatedAt)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CreatedAt)
+        </dd>
+        
+        <!-- Display the date when the complaint was last updated -->
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.UpdatedAt)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.UpdatedAt)
+        </dd>
+        
+        <!-- Display the date when the complaint was closed -->
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ClosedAt)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ClosedAt)
+        </dd>
+    </dl>
+</div>
+
+<!-- Add a link to go back to the complaint list -->
+<div>
+    <a asp-controller="Tech" asp-action="Index">Back to List</a>
+</div>

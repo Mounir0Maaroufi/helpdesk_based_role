@@ -1,0 +1,61 @@
+﻿@* @using Microsoft.AspNetCore.Identity *@
+@* @inject SignInManager<User> SignInManager *@
+@* @inject UserManager<User> UserManager *@
+@{
+    ViewData["Title"] = "HelpDesk - Accueil";
+}
+@* @{ *@
+@*     var user = await UserManager.GetUserAsync(User); *@
+@*     var userId = user?.Id; *@
+@*      *@
+@* } *@
+
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<style>
+		body {
+			background-color: #f8f9fa;
+		}
+		.header {
+			background-color: #007bff;
+			color: #fff;
+			padding: 20px;
+			text-align: center;
+		}
+		.content {
+			margin-top: 30px;
+			padding: 20px;
+			text-align: justify;
+			background-color: #fff;
+			box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+			border-radius: 5px;
+		}
+	</style>
+</head>
+	<header class="header">
+		<h1>HelpDesk</h1>
+		<p>Bienvenue sur notre application de gestion de tickets d'assistance</p>
+	</header>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 content">
+				<h2>Qu'est-ce que HelpDesk ?</h2>
+				<p>HelpDesk est une application web de gestion de tickets d'assistance destinée à faciliter la communication entre les utilisateurs et les techniciens de support. Elle permet aux utilisateurs de soumettre des demandes d'assistance et aux techniciens de les traiter rapidement et efficacement.</p>
+				<h2>Fonctionnalités principales</h2>
+				<ul>
+					<li>Création de tickets d'assistance</li>
+					<li>Suivi de l'état des tickets</li>
+					<li>Affectation des tickets aux techniciens</li>
+					<li>Communication entre les utilisateurs et les techniciens</li>
+					<li>Génération de rapports d'activité</li>
+				</ul>
+				<h2>Comment ça marche ?</h2>
+				<p>Les utilisateurs peuvent créer un ticket d'assistance en fournissant des détails sur le problème rencontré. Les techniciens peuvent consulter les tickets en attente et les affecter à un technicien disponible pour traitement. Les utilisateurs peuvent suivre l'état de leur ticket et communiquer avec le technicien assigné. Une fois le problème résolu, le technicien peut fermer le ticket et générer un rapport d'activité pour le suivi des performances.</p>
+				<h2>Inscrivez-vous dès maintenant !</h2>
+				<p>Si vous êtes un utilisateur, vous pouvez vous inscrire pour créer des tickets d'assistance et suivre leur progression. Si vous êtes un technicien, vous pouvez vous inscrire pour traiter les tickets et communiquer avec les utilisateurs.</p>
+				<a href="/Account/Register" class="btn btn-primary">S'inscrire</a>
+			</div>
+		</div>
+	</div>
+
